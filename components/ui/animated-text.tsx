@@ -26,7 +26,7 @@ export function AnimatedText({ words, className, interval = 3000 }: AnimatedText
   }, [words.length, interval])
 
   return (
-    <span className="inline-block relative overflow-hidden">
+    <span className="inline-block relative overflow-hidden py-[0.1em]">
       <span
         className={cn(
           "inline-block transition-all duration-500",
