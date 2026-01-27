@@ -20,9 +20,8 @@ export function CTASection() {
             <span className="text-sm font-medium text-accent uppercase tracking-wider mb-4 block">
               Ready to Start?
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-6 text-balance">
-              Ready to navigate your{" "}
-              <span className="gradient-text">transition?</span>
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-6">
+              Ready for your <span className="gradient-text">transformation?</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
               Book a free 30-minute compatibility call to explore how Grey Mahout can support you.

@@ -22,10 +22,6 @@ export function AboutCoachSection() {
                   fill
                   className="object-cover object-top"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-6">
-                  <p className="text-xl font-serif font-medium text-primary-foreground">Athira Das</p>
-                  <p className="text-sm text-primary-foreground/80 mt-1">Leadership & Organizational Coach</p>
-                </div>
               </div>
 
               {/* Floating Stats Card */}
@@ -83,9 +79,12 @@ export function AboutCoachSection() {
                 Meet Your Coach
               </h2>
               <div className="space-y-4 text-primary-foreground/80 leading-relaxed mb-8">
+                <p className="text-xl md:text-2xl text-primary-foreground font-medium">
+                  Hi, I&apos;m Athira Das.
+                </p>
                 <p>
-                  Hi, I&apos;m Athira Das. I&apos;m an evidence-based coach specializing in leadership and organizational coaching, 
-                  with a background in tech and data engineering. I have worked at companies including Meta, WeWork, Amazon, 
+                  I&apos;m an evidence-based coach specializing in leadership and organizational coaching,
+                  with a background in tech and data engineering. I have worked at companies including Meta, WeWork, Amazon,
                   and early-stage startups, and I bring a practical, systems-aware approach grounded in real operating experience.
                 </p>
                 <p>

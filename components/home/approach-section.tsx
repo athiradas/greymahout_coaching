@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/ui/section-wrapper"
@@ -16,46 +17,14 @@ export function ApproachSection() {
               {/* Main Card */}
               <div className="relative bg-secondary rounded-3xl p-8 lg:p-12">
                 <div className="space-y-8">
-                  {/* Grey Mahout Visual - Elephant and Rider Metaphor */}
-                  <div className="relative aspect-square max-w-sm mx-auto">
-                    {/* Center - The Rider (Thinking) */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-28 h-28 rounded-full bg-accent/20 flex items-center justify-center">
-                        <span className="font-serif text-sm font-medium text-accent text-center">Strategy & Clarity</span>
-                      </div>
-                    </div>
-
-                    {/* Surrounding - The Elephant (Emotional) */}
-                    {[
-                      { label: "Inner Experience", position: "top-4 left-1/2 -translate-x-1/2" },
-                      { label: "Evidence-Based", position: "top-1/2 right-4 -translate-y-1/2" },
-                      { label: "Practical Actions", position: "bottom-4 left-1/2 -translate-x-1/2" },
-                      { label: "Systems Thinking", position: "top-1/2 left-4 -translate-y-1/2" },
-                    ].map((item, index) => (
-                      <div
-                        key={item.label}
-                        className={`absolute ${item.position} w-24 h-24 rounded-full border-2 border-dashed border-border flex items-center justify-center animate-float`}
-                        style={{ animationDelay: `${index * 200}ms` }}
-                      >
-                        <span className="text-xs font-medium text-muted-foreground text-center px-2">
-                          {item.label}
-                        </span>
-                      </div>
-                    ))}
-
-                    {/* Connecting circle */}
-                    <svg className="absolute inset-0 w-full h-full" style={{ transform: "rotate(45deg)" }}>
-                      <circle
-                        cx="50%"
-                        cy="50%"
-                        r="42%"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1"
-                        className="text-border"
-                        strokeDasharray="8 4"
-                      />
-                    </svg>
+                  {/* Grey Mahout Visual - Elephant and Rider Image */}
+                  <div className="relative aspect-square max-w-sm mx-auto animate-float">
+                    <Image
+                      src="/Elephant Rider.png"
+                      alt="The Grey Mahout Approach - Elephant and Rider metaphor representing the thinking and emotional sides of leadership"
+                      fill
+                      className="object-contain"
+                    />
                   </div>
 
                   <div className="text-center">
@@ -80,8 +49,9 @@ export function ApproachSection() {
                 My Approach at Grey Mahout
               </span>
               <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight mb-6 text-balance">
-                Not just good conversations.{" "}
-                <span className="gradient-text">Structured transformation.</span>
+                Structured transformation.
+                <br />
+                <span className="gradient-text">Aligning strategy and emotion.</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 At Grey Mahout, coaching is not just good conversations. It is a structured, goal-oriented partnership designed to help you build clarity and traction, even when things feel uncertain.

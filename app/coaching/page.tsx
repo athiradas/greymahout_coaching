@@ -4,6 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { CTASection } from "@/components/home/cta-section"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Check, Target, Database, Lightbulb, Rocket, RotateCcw } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/ui/section-wrapper"
@@ -110,12 +111,12 @@ const intersectionLevels = [
     examples: "self-doubt, avoidance, clarity, nervous system regulation",
   },
   {
-    title: "Interpersonal",
+    title: "Interpersonal Relations",
     description: "Communication, influence, conflict, feedback, trust, relationship dynamics, team norms.",
     examples: "misalignment, unclear expectations, conflict, feedback loops",
   },
   {
-    title: "Systems",
+    title: "Organizational System",
     description: "Org structure, incentives, processes, decision-making, culture, power dynamics, and the context that shapes behavior.",
     examples: "incentives, role confusion, decision rights, process breakdowns",
   },
@@ -153,7 +154,7 @@ export default function CoachingPage() {
                   className="group bg-primary-foreground text-primary hover:bg-primary-foreground/90 rounded-full px-8"
                 >
                   <Link href="/contact" className="flex items-center gap-2">
-                    Start with a Chemistry Call
+                    Start with a Compatibility Call
                     <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </Button>
@@ -162,7 +163,7 @@ export default function CoachingPage() {
           </div>
         </section>
 
-        {/* Chemistry Call */}
+        {/* Compatibility Call */}
         <section className="py-24 lg:py-32">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -172,7 +173,7 @@ export default function CoachingPage() {
                     Getting Started
                   </span>
                   <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight mb-6 text-balance">
-                    Start with a Chemistry Call
+                    Start with a Compatibility Call
                   </h2>
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     We begin with a short conversation (free 30 minutes) to understand what you are navigating and whether we are a good fit.
@@ -349,20 +350,12 @@ export default function CoachingPage() {
               {/* Visual */}
               <SectionWrapper animation="slide-left">
                 <div className="relative aspect-square max-w-md mx-auto">
-                  {/* Three overlapping circles */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full border-2 border-accent/30 flex items-center justify-center animate-float">
-                    <span className="text-sm font-medium text-foreground mt-8">Individual</span>
-                  </div>
-                  <div className="absolute bottom-8 left-8 w-48 h-48 rounded-full border-2 border-accent/30 flex items-center justify-center animate-float [animation-delay:0.5s]">
-                    <span className="text-sm font-medium text-foreground mt-16 -ml-8">Interpersonal</span>
-                  </div>
-                  <div className="absolute bottom-8 right-8 w-48 h-48 rounded-full border-2 border-accent/30 flex items-center justify-center animate-float [animation-delay:1s]">
-                    <span className="text-sm font-medium text-foreground mt-16 ml-8">Systems</span>
-                  </div>
-                  {/* Center intersection */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-accent/20 flex items-center justify-center">
-                    <span className="font-serif text-xl font-medium text-accent">GM</span>
-                  </div>
+                  <Image
+                    src="/Coaching Happens Here.png"
+                    alt="The Intersection Model - Coaching happens at the intersection of Individual, Interpersonal Relations, and Organizational System"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
               </SectionWrapper>
 
