@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
+import { Resend } from "resend"
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: NextRequest) {
   try {
@@ -30,28 +33,23 @@ ${message}
 This message was sent from the Grey Mahout contact form.
     `.trim()
 
-    // For now, we'll log the submission and return success
-    // In production, you would integrate with an email service like:
-    // - Resend
-    // - SendGrid
-    // - AWS SES
-    // - Nodemailer with SMTP
-    console.log("Contact form submission:")
-    console.log("To: athiradas@greymahout.com")
-    console.log("Subject:", emailSubject)
-    console.log("Body:", emailBody)
-
-    // To integrate with Resend (recommended), uncomment and add RESEND_API_KEY:
-    /*
-    const resend = new Resend(process.env.RESEND_API_KEY)
-    await resend.emails.send({
-      from: 'Grey Mahout <contact@greymahout.com>',
-      to: 'athiradas@greymahout.com',
+    // Send email using Resend
+    // TODO: Change to athiradas@greymahout.com once domain is verified in Resend
+    const { error } = await resend.emails.send({
+      from: "Grey Mahout <onboarding@resend.dev>",
+      to: "athirad@sas.upenn.edu",
       replyTo: email,
       subject: emailSubject,
       text: emailBody,
     })
-    */
+
+    if (error) {
+      console.error("Resend error:", error)
+      return NextResponse.json(
+        { error: "Failed to send email" },
+        { status: 500 }
+      )
+    }
 
     return NextResponse.json({ success: true })
   } catch (error) {
