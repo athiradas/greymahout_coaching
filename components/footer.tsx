@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Linkedin, Youtube, Mail, ArrowUpRight } from "lucide-react"
 
 const footerLinks = {
@@ -42,9 +43,14 @@ export function Footer() {
         <div className="py-16 lg:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-full bg-primary-foreground flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                <span className="text-primary font-serif font-bold text-lg">G</span>
+            <Link href="/" className="inline-flex items-center gap-2 group">
+              <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
+                <Image
+                  src="/Grey Mahout Logo.png"
+                  alt="Grey Mahout"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="font-serif text-2xl font-semibold text-primary-foreground">
                 Grey Mahout
@@ -144,18 +150,10 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="py-6 border-t border-primary-foreground/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex justify-center items-center">
             <p className="text-sm text-primary-foreground/50">
               {new Date().getFullYear()} Grey Mahout. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm text-primary-foreground/50">
-              <Link href="/contact" className="hover:text-primary-foreground transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/contact" className="hover:text-primary-foreground transition-colors">
-                Terms of Service
-              </Link>
-            </div>
           </div>
         </div>
       </div>

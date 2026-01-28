@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { Menu, X, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -38,11 +39,14 @@ export function Navigation() {
         <div className="container mx-auto px-6 lg:px-12">
           <nav className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="group flex items-center gap-3">
-              <div className="relative">
-                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                  <span className="text-primary-foreground font-serif font-bold text-lg">G</span>
-                </div>
+            <Link href="/" className="group flex items-center gap-2">
+              <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
+                <Image
+                  src="/Grey Mahout Logo.png"
+                  alt="Grey Mahout"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="font-serif text-xl font-semibold tracking-tight">
                 Grey Mahout
