@@ -349,12 +349,13 @@ export default function CoachingPage() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               {/* Visual */}
               <SectionWrapper animation="slide-left">
-                <div className="relative aspect-square max-w-md mx-auto">
+                <div className="relative aspect-square max-w-md mx-auto group">
+                  <div className="absolute inset-0 bg-accent/5 rounded-full blur-3xl scale-75 opacity-0 group-hover:opacity-100 transition-all duration-700" />
                   <Image
                     src="/Coaching Happens Here.png"
                     alt="The Intersection Model - Coaching happens at the intersection of Individual, Interpersonal Relations, and Organizational System"
                     fill
-                    className="object-contain"
+                    className="object-contain transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
               </SectionWrapper>

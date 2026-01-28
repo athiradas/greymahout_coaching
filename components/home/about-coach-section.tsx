@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Linkedin, Youtube, Mail } from "lucide-react"
+import { ArrowRight, Linkedin, BookOpen, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/ui/section-wrapper"
 
@@ -50,13 +50,13 @@ export function AboutCoachSection() {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://www.youtube.com/@athira_das"
+                  href="https://athiradas.substack.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-card text-card-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-                  aria-label="YouTube"
+                  aria-label="Blog"
                 >
-                  <Youtube className="w-5 h-5" />
+                  <BookOpen className="w-5 h-5" />
                 </a>
                 <a
                   href="mailto:athiradas@greymahout.com"

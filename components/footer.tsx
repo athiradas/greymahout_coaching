@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Linkedin, Youtube, Mail, ArrowUpRight } from "lucide-react"
+import { Linkedin, BookOpen, Mail, ArrowUpRight } from "lucide-react"
 
 const footerLinks = {
   services: [
@@ -24,9 +24,9 @@ const socialLinks = [
     icon: Linkedin,
   },
   {
-    href: "https://www.youtube.com/@athira_das",
-    label: "YouTube",
-    icon: Youtube,
+    href: "https://athiradas.substack.com",
+    label: "Blog",
+    icon: BookOpen,
   },
   {
     href: "mailto:athiradas@greymahout.com",

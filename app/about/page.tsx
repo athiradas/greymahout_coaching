@@ -4,7 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Linkedin, Youtube, Mail } from "lucide-react"
+import { ArrowRight, Linkedin, BookOpen, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/ui/section-wrapper"
 
@@ -93,13 +93,14 @@ export default function AboutPage() {
 
               {/* Photo with social links */}
               <SectionWrapper animation="slide-right">
-                <div className="relative max-w-sm mx-auto lg:mx-0 lg:ml-auto">
+                <div className="relative max-w-sm mx-auto lg:mx-0 lg:ml-auto -mt-8">
                   <div className="aspect-square rounded-3xl overflow-hidden relative">
                     <Image
                       src="/Athira Das.JPG"
                       alt="Athira Das - Leadership Coach"
                       fill
-                      className="object-cover object-top"
+                      className="object-cover object-[center_15%]"
+                      quality={100}
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-6">
                       <p className="text-xl font-serif font-medium text-primary-foreground">Athira Das</p>
@@ -119,13 +120,13 @@ export default function AboutPage() {
                       <Linkedin className="w-5 h-5" />
                     </a>
                     <a
-                      href="https://www.youtube.com/@athira_das"
+                      href="https://athiradas.substack.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-card text-card-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-                      aria-label="YouTube"
+                      aria-label="Blog"
                     >
-                      <Youtube className="w-5 h-5" />
+                      <BookOpen className="w-5 h-5" />
                     </a>
                     <a
                       href="mailto:athiradas@greymahout.com"

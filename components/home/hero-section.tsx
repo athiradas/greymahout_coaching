@@ -22,17 +22,20 @@ export function HeroSection() {
           <div className="lg:flex-1 max-w-2xl">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-up">
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-sm font-medium text-muted-foreground">
-                1:1 Coaching · Team Coaching · Change Management & AI Adoption Consulting
+              <span className="text-sm font-medium text-muted-foreground flex items-center gap-2">
+                1:1 Coaching
+                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                Team Coaching
+                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                AI Adoption Consulting
               </span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-medium leading-[1.05] tracking-tight mb-8 animate-fade-up [animation-delay:100ms]">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-medium leading-[1.25] tracking-tight mb-8 animate-fade-up [animation-delay:100ms]">
               Lead through
               <br />
-              <span className="relative">
+              <span className="relative inline-block pb-2">
                 <AnimatedText
                   words={["change", "growth", "transition",]}
                   className="gradient-text"
@@ -85,13 +88,14 @@ export function HeroSection() {
           {/* Right Column - Photo */}
           <div className="mt-12 lg:mt-0 flex justify-center shrink-0 animate-fade-up [animation-delay:200ms]">
             <div className="text-center">
-              <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl">
+              <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl -mt-8">
                 <Image
                   src="/Athira Das.JPG"
                   alt="Athira Das - Executive Coach & AI Adoption Consultant"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-[center_15%]"
                   priority
+                  quality={100}
                 />
               </div>
               <div className="mt-6">
