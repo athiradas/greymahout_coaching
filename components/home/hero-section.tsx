@@ -25,7 +25,7 @@ export function HeroSection() {
               <span className="text-sm font-medium text-muted-foreground flex items-center gap-2">
                 1:1 Coaching
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                Team Coaching
+                Group Coaching
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 AI Adoption Consulting
               </span>

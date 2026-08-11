@@ -16,7 +16,7 @@ const services = [
   },
   {
     icon: Users,
-    title: "AI Adoption Team Coaching",
+    title: "AI Adoption Group Coaching",
     description:
       "Support for leaders and teams across the organization as they adopt AI and navigate change. We focus on reducing resistance, strengthening collaboration and psychological safety, clarifying roles and workflows, and building habits that make AI a capability, not a threat.",
     href: "/coaching",

@@ -109,7 +109,7 @@ export function ContactForm() {
           >
             <option value="">Select an option</option>
             <option value="coaching">Executive Coaching</option>
-            <option value="team-coaching">Team Coaching</option>
+            <option value="group-coaching">Group Coaching</option>
             <option value="consulting">AI Adoption Consulting</option>
             <option value="not-sure">Not sure yet</option>
           </select>

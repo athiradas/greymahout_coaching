@@ -7,7 +7,7 @@ import { Linkedin, BookOpen, Mail, ArrowUpRight } from "lucide-react"
 const footerLinks = {
   services: [
     { href: "/coaching", label: "Executive Coaching" },
-    { href: "/coaching", label: "Team Coaching" },
+    { href: "/coaching", label: "Group Coaching" },
     { href: "/consulting", label: "AI Consulting" },
   ],
   company: [

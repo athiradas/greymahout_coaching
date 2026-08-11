@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Do you work with teams or just individuals?",
     answer:
-      "Both. Individual coaching supports leaders through transitions, decision-making, communication, and growth. Team coaching supports groups navigating change, strengthening collaboration, and building psychological safety and performance.",
+      "Both. Individual coaching supports leaders through transitions, decision-making, communication, and growth. Group coaching supports teams navigating change, strengthening collaboration, and building psychological safety and performance.",
   },
   {
     question: "How much does coaching cost?",

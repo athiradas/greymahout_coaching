@@ -33,7 +33,7 @@ export function AboutCoachSection() {
                   </div>
                   <div>
                     <div className="font-serif text-2xl font-semibold text-accent">UPenn</div>
-                    <div className="text-xs text-muted-foreground">MSOD Program</div>
+                    <div className="text-xs text-muted-foreground">MS Organizational Dynamics</div>
                   </div>
                 </div>
               </div>
@@ -88,8 +88,8 @@ export function AboutCoachSection() {
                   and early-stage startups, and I bring a practical, systems-aware approach grounded in real operating experience.
                 </p>
                 <p>
-                  I&apos;m finishing the MSOD program at the University of Pennsylvania, with a focus on Leadership and Organizational 
-                  Coaching. My research on AI integration and its impact on the workplace shapes the way I support leaders and 
+                  I hold an MS in Organizational Dynamics from the University of Pennsylvania, along with a graduate
+                  certificate in Leadership and Organizational Coaching. My research on AI integration and its impact on the workplace shapes the way I support leaders and 
                   organizations through AI-driven change. I&apos;m also certified in Integrated Attachment Theory, which strengthens 
                   my work around communication, relationships, and patterns that show up under stress.
                 </p>

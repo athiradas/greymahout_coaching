@@ -54,11 +54,12 @@ const timeline = [
 ]
 
 const credentials = [
-  "MSOD (in progress), University of Pennsylvania",
-  "Leadership and Organizational Coaching focus",
-  "Certified in Integrated Attachment Theory",
+  "MS in Organizational Dynamics, University of Pennsylvania",
+  "Graduate certificate in Leadership and Organizational Coaching, University of Pennsylvania",
+  "Certified in Integrated Attachment Theory — accredited with the Association for Coaching",
   "Former Data Engineer at Meta, WeWork, Amazon",
   "Research focus on AI integration in the workplace",
+  "MS in Business Analytics; B.Tech in Electronics and Biomedical Engineering",
 ]
 
 export default function AboutPage() {
@@ -84,9 +85,9 @@ export default function AboutPage() {
                     <span className="text-accent">Athira Das</span>
                   </h1>
                   <p className="text-xl text-primary-foreground/80 leading-relaxed">
-                    I&apos;m an evidence-based coach, finishing the MSOD program in Organizational
-                    Dynamics at the University of Pennsylvania, a former data engineer at Meta and
-                    WeWork, and a researcher focused on how AI is integrated in the workplace.
+                    I&apos;m an evidence-based coach with an MS in Organizational Dynamics from the
+                    University of Pennsylvania, a former data engineer at Meta and WeWork, and a
+                    researcher focused on how AI is integrated in the workplace.
                   </p>
                 </div>
               </SectionWrapper>
