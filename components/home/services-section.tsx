@@ -16,19 +16,19 @@ const services = [
   },
   {
     icon: Users,
-    title: "AI Adoption Group Coaching",
+    title: "Group Coaching",
     description:
-      "Support for leaders and teams across the organization as they adopt AI and navigate change. We focus on reducing resistance, strengthening collaboration and psychological safety, clarifying roles and workflows, and building habits that make AI a capability, not a threat.",
+      "Small-cohort coaching for tech leaders and founders, running over several months rather than a single session. You grow alongside peers facing the same decisions — a learning community built on real challenges, honest feedback, and accountability that makes new habits hold.",
     href: "/coaching",
-    features: ["Reduce resistance", "Strengthen collaboration", "Build psychological safety"],
+    features: ["Small cohorts", "Peer learning community", "Multi-month program"],
   },
   {
     icon: Sparkles,
-    title: "Change Management & AI Adoption Consulting",
+    title: "AI Adoption Consulting and Coaching",
     description:
-      "Consulting from both a people and tech perspective. I help companies build a practical 6-month AI adoption roadmap, covering organizational readiness, role and workflow shifts, enablement, governance, and success metrics.",
+      "Consulting from both a people and tech perspective, paired with team coaching that makes the change stick. I help companies build a practical 6-month AI adoption roadmap — organizational readiness, role and workflow shifts, enablement, governance, and success metrics — then coach the teams delivering it to reduce resistance, strengthen collaboration and psychological safety, and make AI a capability, not a threat.",
     href: "/consulting",
-    features: ["6-month roadmap", "Role & workflow shifts", "Success metrics"],
+    features: ["6-month roadmap", "Role & workflow shifts", "Team coaching", "Success metrics"],
   },
 ]
 

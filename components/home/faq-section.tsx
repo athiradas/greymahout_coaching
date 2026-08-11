@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Do you work with teams or just individuals?",
     answer:
-      "Both. Individual coaching supports leaders through transitions, decision-making, communication, and growth. Group coaching supports teams navigating change, strengthening collaboration, and building psychological safety and performance.",
+      "Both. Individual coaching supports leaders through transitions, decision-making, communication, and growth. Group coaching brings tech leaders and founders together in a small cohort over several months, so you learn alongside peers working through the same decisions. For teams adopting AI, team coaching runs as part of an AI adoption consulting engagement.",
   },
   {
     question: "How much does coaching cost?",
