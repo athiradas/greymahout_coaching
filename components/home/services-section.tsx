@@ -4,11 +4,14 @@ import Link from "next/link"
 import { ArrowUpRight, Brain, Users, Sparkles } from "lucide-react"
 import { SectionWrapper } from "@/components/ui/section-wrapper"
 import { cn } from "@/lib/utils"
+import { profile, titleCase } from "@/lib/profile"
+
+const offer = profile.services
 
 const services = [
   {
     icon: Brain,
-    title: "One-on-one Coaching",
+    title: titleCase(offer["one-on-one"].label),
     description:
       "One-on-one coaching for leaders navigating growth, transitions, and complex challenges. We'll work on your goals and translate them into clear priorities, stronger communication, and practical next steps.",
     href: "/coaching",
@@ -16,7 +19,7 @@ const services = [
   },
   {
     icon: Users,
-    title: "Group Coaching",
+    title: titleCase(offer["group-coaching"].label),
     description:
       "Small-cohort coaching for tech leaders and founders, running over several months rather than a single session. You grow alongside peers facing the same decisions — a learning community built on real challenges, honest feedback, and accountability that makes new habits hold.",
     href: "/coaching",
@@ -24,7 +27,7 @@ const services = [
   },
   {
     icon: Sparkles,
-    title: "AI Adoption Consulting and Coaching",
+    title: `${titleCase(offer["ai-consulting"].label)} and Coaching`,
     description:
       "Consulting from both a people and tech perspective, paired with team coaching that makes the change stick. I help companies build a practical 6-month AI adoption roadmap — organizational readiness, role and workflow shifts, enablement, governance, and success metrics — then coach the teams delivering it to reduce resistance, strengthen collaboration and psychological safety, and make AI a capability, not a threat.",
     href: "/consulting",

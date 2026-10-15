@@ -5,6 +5,12 @@ import Image from "next/image"
 import { ArrowRight, Linkedin, BookOpen, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/ui/section-wrapper"
+import { profile } from "@/lib/profile"
+
+const { certificates, education, work, links } = profile
+const msod = education["penn-msod"]
+const pennCert = education["penn-coaching"]
+const iat = certificates.iat
 
 export function AboutCoachSection() {
   return (
@@ -28,12 +34,12 @@ export function AboutCoachSection() {
               <div className="absolute -bottom-6 -right-6 lg:-right-12 bg-card text-card-foreground rounded-2xl p-6 shadow-xl animate-float [animation-delay:0.5s]">
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
-                    <div className="font-serif text-2xl font-semibold text-accent">Meta</div>
-                    <div className="text-xs text-muted-foreground">WeWork, Amazon</div>
+                    <div className="font-serif text-2xl font-semibold text-accent">{work.meta.short}</div>
+                    <div className="text-xs text-muted-foreground">{work.wework.name}</div>
                   </div>
                   <div>
                     <div className="font-serif text-2xl font-semibold text-accent">UPenn</div>
-                    <div className="text-xs text-muted-foreground">MS Organizational Dynamics</div>
+                    <div className="text-xs text-muted-foreground">{msod.studyType} {msod.area}</div>
                   </div>
                 </div>
               </div>
@@ -41,7 +47,7 @@ export function AboutCoachSection() {
               {/* Social Links */}
               <div className="absolute -top-4 -left-4 lg:-left-8 flex gap-2">
                 <a
-                  href="https://www.linkedin.com/in/athiradas"
+                  href={links.linkedin.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-card text-card-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
@@ -50,7 +56,7 @@ export function AboutCoachSection() {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://athiradas.substack.com"
+                  href={links.substack.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-card text-card-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
@@ -59,7 +65,7 @@ export function AboutCoachSection() {
                   <BookOpen className="w-5 h-5" />
                 </a>
                 <a
-                  href="mailto:athiradas@greymahout.com"
+                  href={`mailto:${links["email-business"].label}`}
                   className="w-12 h-12 rounded-full bg-card text-card-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
                   aria-label="Email"
                 >
@@ -84,13 +90,13 @@ export function AboutCoachSection() {
                 </p>
                 <p>
                   I&apos;m an evidence-based coach specializing in leadership and organizational coaching,
-                  with a background in tech and data engineering. I have worked at companies including Meta, WeWork, Amazon,
-                  and early-stage startups, and I bring a practical, systems-aware approach grounded in real operating experience.
+                  with a background in tech and data engineering. I have worked at companies including {work.meta.short},{" "}
+                  {work.wework.name} and early-stage startups, and I bring a practical, systems-aware approach grounded in real operating experience.
                 </p>
                 <p>
-                  I hold an MS in Organizational Dynamics from the University of Pennsylvania, along with a graduate
-                  certificate in Leadership and Organizational Coaching. My research on AI integration and its impact on the workplace shapes the way I support leaders and 
-                  organizations through AI-driven change. I&apos;m also certified in Integrated Attachment Theory, which strengthens 
+                  I hold an {msod.studyType} in {msod.area} from the {msod.institution}, along with a{" "}
+                  {pennCert.studyType.toLowerCase()} in {pennCert.area}. My research on AI integration and its impact on the workplace shapes the way I support leaders and{" "}
+                  organizations through AI-driven change. I also hold the {iat.name} from the {iat.issuer}, which strengthens{" "}
                   my work around communication, relationships, and patterns that show up under stress.
                 </p>
                 <p>
@@ -102,7 +108,12 @@ export function AboutCoachSection() {
 
               {/* Credentials */}
               <div className="flex flex-wrap gap-3 mb-10">
-                {["Tech Background (Meta, WeWork, Startups)", "UPenn MSOD", "Evidence-Based Coaching", "Integrated Attachment Theory Certified"].map((cred) => (
+                {[
+                  `Tech Background (${work.meta.short}, ${work.wework.name}, Startups)`,
+                  msod.short,
+                  "Evidence-Based Coaching",
+                  `${iat.name.replace(/ Certification$/, "")} Certified`,
+                ].map((cred) => (
                   <span
                     key={cred}
                     className="px-4 py-2 rounded-full border border-primary-foreground/20 text-sm text-primary-foreground/80"

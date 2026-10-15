@@ -5,13 +5,16 @@ import { Footer } from "@/components/footer"
 import { ContactForm } from "@/components/contact/contact-form"
 import { Mail, MapPin, Calendar, Linkedin } from "lucide-react"
 import { SectionWrapper } from "@/components/ui/section-wrapper"
+import { profile } from "@/lib/profile"
+
+const { links } = profile
 
 const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "athiradas@greymahout.com",
-    href: "mailto:athiradas@greymahout.com",
+    value: links["email-business"].label,
+    href: `mailto:${links["email-business"].label}`,
   },
   {
     icon: MapPin,
@@ -29,7 +32,7 @@ const contactInfo = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "Connect on LinkedIn",
-    href: "https://www.linkedin.com/in/athiradas",
+    href: links.linkedin.url,
   },
 ]
 
@@ -82,7 +85,7 @@ export default function ContactPage() {
             <SectionWrapper>
               <div className="bg-card border border-border rounded-3xl overflow-hidden">
                 <iframe
-                  src="https://calendly.com/athiradas/discovery-call"
+                  src={links.calendly.url}
                   width="100%"
                   height="700"
                   frameBorder="0"

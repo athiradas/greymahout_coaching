@@ -3,12 +3,15 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Linkedin, BookOpen, Mail, ArrowUpRight } from "lucide-react"
+import { profile, titleCase } from "@/lib/profile"
+
+const { services, links } = profile
 
 const footerLinks = {
   services: [
-    { href: "/coaching", label: "Executive Coaching" },
-    { href: "/coaching", label: "Group Coaching" },
-    { href: "/consulting", label: "AI Consulting" },
+    { href: "/coaching", label: titleCase(services["one-on-one"].label) },
+    { href: "/coaching", label: titleCase(services["group-coaching"].label) },
+    { href: "/consulting", label: titleCase(services["ai-consulting"].label) },
   ],
   company: [
     { href: "/about", label: "About Athira" },
@@ -19,17 +22,17 @@ const footerLinks = {
 
 const socialLinks = [
   {
-    href: "https://www.linkedin.com/in/athiradas",
+    href: links.linkedin.url,
     label: "LinkedIn",
     icon: Linkedin,
   },
   {
-    href: "https://athiradas.substack.com",
+    href: links.substack.url,
     label: "Blog",
     icon: BookOpen,
   },
   {
-    href: "mailto:athiradas@greymahout.com",
+    href: `mailto:${links["email-business"].label}`,
     label: "Email",
     icon: Mail,
   },

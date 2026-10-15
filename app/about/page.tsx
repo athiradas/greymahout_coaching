@@ -7,6 +7,10 @@ import Image from "next/image"
 import { ArrowRight, Linkedin, BookOpen, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/ui/section-wrapper"
+import { profile } from "@/lib/profile"
+
+const { identity, certificates, education, work, focus, links } = profile
+const msod = education["penn-msod"]
 
 const timeline = [
   {
@@ -53,13 +57,15 @@ const timeline = [
   },
 ]
 
+// Every line is a fact from the master profile.
 const credentials = [
-  "MS in Organizational Dynamics, University of Pennsylvania",
-  "Graduate certificate in Leadership and Organizational Coaching, University of Pennsylvania",
-  "Certified in Integrated Attachment Theory — accredited with the Association for Coaching",
-  "Former Data Engineer at Meta, WeWork, Amazon",
-  "Research focus on AI integration in the workplace",
-  "MS in Business Analytics; B.Tech in Electronics and Biomedical Engineering",
+  msod.label,
+  education["penn-coaching"].label,
+  certificates.iat.label,
+  `Group coaching training: ${certificates["group-coach-training"].label}`,
+  `Former Data Engineer at ${work.meta.short} and ${work.wework.name}`,
+  focus["research-focus"].label,
+  [education["uic-msba"], education["cusat-btech"]].map((e) => `${e.studyType} in ${e.area}`).join("; "),
 ]
 
 export default function AboutPage() {
@@ -85,8 +91,8 @@ export default function AboutPage() {
                     <span className="text-accent">Athira Das</span>
                   </h1>
                   <p className="text-xl text-primary-foreground/80 leading-relaxed">
-                    I&apos;m an evidence-based coach with an MS in Organizational Dynamics from the
-                    University of Pennsylvania, a former data engineer at Meta and WeWork, and a
+                    I&apos;m an evidence-based coach with an {msod.studyType} in {msod.area} from the{" "}
+                    {msod.institution}, a former data engineer at {work.meta.short} and {work.wework.name}, and a
                     researcher focused on how AI is integrated in the workplace.
                   </p>
                 </div>
@@ -98,21 +104,21 @@ export default function AboutPage() {
                   <div className="aspect-square rounded-3xl overflow-hidden relative">
                     <Image
                       src="/Athira Das.JPG"
-                      alt="Athira Das - Leadership Coach"
+                      alt={`${profile.basics.name} - ${identity.headline.label}`}
                       fill
                       className="object-cover object-[center_15%]"
                       quality={100}
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-6">
-                      <p className="text-xl font-serif font-medium text-primary-foreground">Athira Das</p>
-                      <p className="text-sm text-primary-foreground/80 mt-1">Leadership Coach</p>
+                      <p className="text-xl font-serif font-medium text-primary-foreground">{profile.basics.name}</p>
+                      <p className="text-sm text-primary-foreground/80 mt-1">{identity.headline.label}</p>
                     </div>
                   </div>
                   
                   {/* Floating social links */}
                   <div className="absolute -top-4 -left-4 flex gap-2">
                     <a
-                      href="https://www.linkedin.com/in/athiradas"
+                      href={links.linkedin.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-card text-card-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
@@ -121,7 +127,7 @@ export default function AboutPage() {
                       <Linkedin className="w-5 h-5" />
                     </a>
                     <a
-                      href="https://athiradas.substack.com"
+                      href={links.substack.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-card text-card-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
@@ -130,7 +136,7 @@ export default function AboutPage() {
                       <BookOpen className="w-5 h-5" />
                     </a>
                     <a
-                      href="mailto:athiradas@greymahout.com"
+                      href={`mailto:${links["email-business"].label}`}
                       className="w-12 h-12 rounded-full bg-card text-card-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
                       aria-label="Email"
                     >

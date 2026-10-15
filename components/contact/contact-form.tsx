@@ -8,6 +8,9 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Send, Check, Loader2 } from "lucide-react"
+import { profile, titleCase } from "@/lib/profile"
+
+const { services } = profile
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -108,9 +111,9 @@ export function ContactForm() {
             className="flex h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
           >
             <option value="">Select an option</option>
-            <option value="coaching">Executive Coaching</option>
-            <option value="group-coaching">Group Coaching</option>
-            <option value="consulting">AI Adoption Consulting</option>
+            <option value="coaching">{titleCase(services["one-on-one"].label)}</option>
+            <option value="group-coaching">{titleCase(services["group-coaching"].label)}</option>
+            <option value="consulting">{titleCase(services["ai-consulting"].label)}</option>
             <option value="not-sure">Not sure yet</option>
           </select>
         </div>
