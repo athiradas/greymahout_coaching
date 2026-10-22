@@ -1,5 +1,5 @@
 {
-  "_about": "Generated from Athira's master profile (version 3, 2026-10-15) for greymahout.com. Don't edit by hand: change the master profile, then run the export.",
+  "_about": "Generated from Athira's master profile (version 4, 2026-10-15) for greymahout.com. Don't edit by hand: change the master profile, then run the export.",
   "basics": {
     "name": "Athira Das"
   },
@@ -9,20 +9,21 @@
     }
   },
   "certificates": {
-    "iat": {
-      "label": "Integrated Attachment Theory Certification, Personal Development School (program accredited by the Association for Coaching)",
-      "name": "Integrated Attachment Theory Certification",
-      "issuer": "Personal Development School",
-      "accreditedBy": "Association for Coaching"
-    },
     "group-coach-training": {
       "label": "The Capable Group Coach, Verve Coaching",
+      "short": "Certified Group Coach",
       "dates": "Issued Oct 2026",
       "name": "The Capable Group Coach",
       "issuer": "Verve Coaching",
       "trainer": "Dr. Erek Ostrowski",
       "trainerBook": "The Capable Group Coach",
       "date": "2026-10"
+    },
+    "iat": {
+      "label": "Integrated Attachment Theory Certification, Personal Development School (program accredited by the Association for Coaching)",
+      "name": "Integrated Attachment Theory Certification",
+      "issuer": "Personal Development School",
+      "accreditedBy": "Association for Coaching"
     }
   },
   "education": {
@@ -76,14 +77,6 @@
       "position": "Data Engineer",
       "startDate": "2018-01",
       "endDate": "2020-01"
-    }
-  },
-  "courses": {
-    "ai-adoption-course": {
-      "label": "AI Adoption in Organizations: A Practical Playbook",
-      "summary": "Self-paced online course for small and medium-sized businesses",
-      "availability": "Coming soon",
-      "url": "https://www.athiradas.com/courses"
     }
   },
   "talks": {

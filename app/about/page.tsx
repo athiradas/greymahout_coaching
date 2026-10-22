@@ -61,8 +61,8 @@ const timeline = [
 const credentials = [
   msod.label,
   education["penn-coaching"].label,
-  certificates.iat.label,
   `Group coaching training: ${certificates["group-coach-training"].label}`,
+  certificates.iat.label,
   `Former Data Engineer at ${work.meta.short} and ${work.wework.name}`,
   focus["research-focus"].label,
   [education["uic-msba"], education["cusat-btech"]].map((e) => `${e.studyType} in ${e.area}`).join("; "),

@@ -4,25 +4,17 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { CTASection } from "@/components/home/cta-section"
 import Link from "next/link"
-import { ArrowRight, Check, Users, Brain, BarChart, FileText, ArrowUpRight, GraduationCap, PlayCircle, Presentation } from "lucide-react"
+import { ArrowRight, Check, Users, Brain, BarChart, FileText, ArrowUpRight, PlayCircle, Presentation } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/ui/section-wrapper"
 import { cn } from "@/lib/utils"
 import { profile } from "@/lib/profile"
 
-// The course, the talk and the workshop come from the master profile.
-const { courses, talks } = profile
-const course = courses["ai-adoption-course"]
+// The talk and the workshop come from the master profile.
+const { talks } = profile
 const gradTalk = talks["penn-grad-talk"]
 const workshop = talks["oct14-workshop"]
 const teaching = [
-  {
-    icon: GraduationCap,
-    kicker: `Online course · ${course.availability}`,
-    title: course.label,
-    body: `${course.summary}.`,
-    link: { href: course.url, text: "About the course" },
-  },
   {
     icon: PlayCircle,
     kicker: `${gradTalk.series} · ${gradTalk.format}`,
@@ -257,12 +249,12 @@ export default function ConsultingPage() {
                   Teaching & Speaking
                 </span>
                 <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-balance">
-                  Courses, talks and <span className="gradient-text">workshops</span>
+                  Talks and <span className="gradient-text">workshops</span>
                 </h2>
               </div>
             </SectionWrapper>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {teaching.map((item, index) => (
                 <SectionWrapper key={item.kicker} delay={index * 100}>
                   <div className={cn(

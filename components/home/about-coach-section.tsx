@@ -112,7 +112,7 @@ export function AboutCoachSection() {
                   `Tech Background (${work.meta.short}, ${work.wework.name}, Startups)`,
                   msod.short,
                   "Evidence-Based Coaching",
-                  `${iat.name.replace(/ Certification$/, "")} Certified`,
+                  certificates["group-coach-training"].short,
                 ].map((cred) => (
                   <span
                     key={cred}
