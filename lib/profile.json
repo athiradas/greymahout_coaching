@@ -1,0 +1,146 @@
+{
+  "_about": "Generated from Athira's master profile (version 4, 2026-10-15) for greymahout.com. Don't edit by hand: change the master profile, then run the export.",
+  "basics": {
+    "name": "Athira Das"
+  },
+  "identity": {
+    "headline": {
+      "label": "Leadership Coach & AI Adoption Consultant"
+    }
+  },
+  "certificates": {
+    "group-coach-training": {
+      "label": "The Capable Group Coach, Verve Coaching",
+      "short": "Certified Group Coach",
+      "dates": "Issued Oct 2026",
+      "name": "The Capable Group Coach",
+      "issuer": "Verve Coaching",
+      "trainer": "Dr. Erek Ostrowski",
+      "trainerBook": "The Capable Group Coach",
+      "date": "2026-10"
+    },
+    "iat": {
+      "label": "Integrated Attachment Theory Certification, Personal Development School (program accredited by the Association for Coaching)",
+      "name": "Integrated Attachment Theory Certification",
+      "issuer": "Personal Development School",
+      "accreditedBy": "Association for Coaching"
+    }
+  },
+  "education": {
+    "penn-msod": {
+      "label": "MS in Organizational Dynamics, University of Pennsylvania",
+      "short": "UPenn MSOD",
+      "dates": "2026",
+      "institution": "University of Pennsylvania",
+      "studyType": "MS",
+      "area": "Organizational Dynamics",
+      "concentration": "Leadership and Organizational Coaching",
+      "endDate": "2026"
+    },
+    "penn-coaching": {
+      "label": "Graduate certificate in Leadership and Organizational Coaching, University of Pennsylvania",
+      "institution": "University of Pennsylvania",
+      "studyType": "Graduate certificate",
+      "area": "Leadership and Organizational Coaching"
+    },
+    "uic-msba": {
+      "label": "MS in Business Analytics, University of Illinois at Chicago",
+      "dates": "2017",
+      "institution": "University of Illinois at Chicago",
+      "studyType": "MS",
+      "area": "Business Analytics",
+      "endDate": "2017"
+    },
+    "cusat-btech": {
+      "label": "B.Tech in Electronics and Biomedical Engineering, Cochin University of Science and Technology",
+      "dates": "2013",
+      "institution": "Cochin University of Science and Technology",
+      "studyType": "B.Tech",
+      "area": "Electronics and Biomedical Engineering",
+      "endDate": "2013"
+    }
+  },
+  "work": {
+    "meta": {
+      "label": "Senior Data Engineer, Meta",
+      "dates": "February 2020 – August 2023",
+      "name": "Meta Platforms",
+      "short": "Meta",
+      "position": "Senior Data Engineer",
+      "startDate": "2020-02",
+      "endDate": "2023-08"
+    },
+    "wework": {
+      "label": "Data Engineer, WeWork",
+      "dates": "January 2018 – January 2020",
+      "name": "WeWork",
+      "position": "Data Engineer",
+      "startDate": "2018-01",
+      "endDate": "2020-01"
+    }
+  },
+  "talks": {
+    "oct14-workshop": {
+      "label": "AI Adoption in Organizations: A Practical Playbook",
+      "dates": "14 Oct 2026",
+      "format": "Lunch & Learn",
+      "host": "Penn LPS Organizational Dynamics",
+      "mode": "Online",
+      "date": "2026-10-14"
+    },
+    "penn-grad-talk": {
+      "label": "AI Integration in Organizations: The Question to Ask Before You Adopt AI",
+      "series": "Penn Grad Talks",
+      "format": "Video",
+      "url": "https://www.youtube.com/watch?v=LPDM7bkUBvw"
+    }
+  },
+  "services": {
+    "one-on-one": {
+      "label": "One-on-one coaching"
+    },
+    "group-coaching": {
+      "label": "Group coaching"
+    },
+    "ai-consulting": {
+      "label": "AI adoption consulting"
+    },
+    "intro-call": {
+      "label": "Free 30-minute compatibility call",
+      "url": "https://calendly.com/athiradas/discovery-call"
+    }
+  },
+  "focus": {
+    "research-focus": {
+      "label": "Research on AI integration in the workplace"
+    },
+    "approach": {
+      "label": "Psychodynamics, humanistic psychology, systems thinking and adult development"
+    }
+  },
+  "links": {
+    "linkedin": {
+      "label": "linkedin.com/in/athiradas",
+      "url": "https://www.linkedin.com/in/athiradas"
+    },
+    "email-business": {
+      "label": "athiradas@greymahout.com"
+    },
+    "calendly": {
+      "label": "calendly.com/athiradas/discovery-call",
+      "url": "https://calendly.com/athiradas/discovery-call"
+    },
+    "substack": {
+      "label": "blog.athiradas.com (Substack)",
+      "url": "https://blog.athiradas.com"
+    },
+    "youtube": {
+      "label": "youtube.com/@athira_das",
+      "url": "https://www.youtube.com/@athira_das"
+    },
+    "podcast": {
+      "label": "Grey Mahout: Be the Mahout of Your Brain! (Spotify)",
+      "url": "https://open.spotify.com/show/5zLwrk8JEHUZT4vQSFc4BU"
+    }
+  }
+}

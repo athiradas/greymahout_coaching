@@ -1,10 +1,15 @@
 "use client"
 
+import { Fragment } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { AnimatedText } from "@/components/ui/animated-text"
+import { profile, titleCase } from "@/lib/profile"
+
+const { identity, education, work, services } = profile
+const offer = [services["one-on-one"], services["group-coaching"], services["ai-consulting"]].map((s) => titleCase(s.label))
 
 export function HeroSection() {
   return (
@@ -23,11 +28,12 @@ export function HeroSection() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-up">
               <span className="text-sm font-medium text-muted-foreground flex items-center gap-2">
-                1:1 Coaching
-                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                Group Coaching
-                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                AI Adoption Consulting
+                {offer.map((label, i) => (
+                  <Fragment key={label}>
+                    {i > 0 && <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />}
+                    {label}
+                  </Fragment>
+                ))}
               </span>
             </div>
 
@@ -80,7 +86,7 @@ export function HeroSection() {
             {/* Proof Strip */}
             <div className="mt-8 animate-fade-up [animation-delay:350ms]">
               <p className="text-sm text-muted-foreground">
-                Tech background (Meta, WeWork, Startups) · UPenn MSOD · Evidence-based coaching
+                Tech background ({work.meta.short}, {work.wework.name}, Startups) · {education["penn-msod"].short} · Evidence-based coaching
               </p>
             </div>
           </div>
@@ -91,7 +97,7 @@ export function HeroSection() {
               <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl -mt-8">
                 <Image
                   src="/Athira Das.JPG"
-                  alt="Athira Das - Executive Coach & AI Adoption Consultant"
+                  alt={`${profile.basics.name} - ${identity.headline.label}`}
                   fill
                   className="object-cover object-[center_15%]"
                   priority
@@ -100,10 +106,10 @@ export function HeroSection() {
               </div>
               <div className="mt-6">
                 <h2 className="font-serif text-2xl md:text-3xl font-medium text-foreground">
-                  Athira Das
+                  {profile.basics.name}
                 </h2>
                 <p className="text-muted-foreground mt-1">
-                  Coach & AI Adoption Consultant
+                  {identity.headline.label}
                 </p>
               </div>
             </div>
