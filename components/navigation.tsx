@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils"
 const navLinks = [
   { href: "/coaching", label: "Coaching" },
   { href: "/consulting", label: "AI Consulting" },
+  { href: "/talks", label: "Talks" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Resources" },
 ]
@@ -48,7 +49,7 @@ export function Navigation() {
                   className="object-contain"
                 />
               </div>
-              <span className="font-serif text-xl font-semibold tracking-tight">
+              <span className="font-serif text-xl font-semibold tracking-tight whitespace-nowrap">
                 Grey Mahout
               </span>
             </Link>
@@ -59,7 +60,7 @@ export function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative px-5 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors group"
+                  className="relative px-4 xl:px-5 py-2 text-sm font-medium whitespace-nowrap text-foreground/80 hover:text-foreground transition-colors group"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-1/2" />
