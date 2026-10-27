@@ -27,7 +27,7 @@ const teaching = [
     kicker: `${workshop.format} · ${workshop.dates}`,
     title: workshop.label,
     body: `For ${workshop.host}, ${workshop.mode.toLowerCase()}.`,
-    link: null,
+    link: { href: workshop.url, text: "Watch the recording" },
   },
 ]
 
