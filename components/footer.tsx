@@ -15,6 +15,7 @@ const footerLinks = {
   ],
   company: [
     { href: "/about", label: "About Athira" },
+    { href: "/talks", label: "Talks & Workshops" },
     { href: "/blog", label: "Resources" },
     { href: "/contact", label: "Contact" },
   ],

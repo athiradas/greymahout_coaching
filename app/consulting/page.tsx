@@ -4,32 +4,10 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { CTASection } from "@/components/home/cta-section"
 import Link from "next/link"
-import { ArrowRight, Check, Users, Brain, BarChart, FileText, ArrowUpRight, PlayCircle, Presentation } from "lucide-react"
+import { ArrowRight, Check, Users, Brain, BarChart, FileText, ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/ui/section-wrapper"
 import { cn } from "@/lib/utils"
-import { profile } from "@/lib/profile"
-
-// The talk and the workshop come from the master profile.
-const { talks } = profile
-const gradTalk = talks["penn-grad-talk"]
-const workshop = talks["oct14-workshop"]
-const teaching = [
-  {
-    icon: PlayCircle,
-    kicker: `${gradTalk.series} · ${gradTalk.format}`,
-    title: gradTalk.label,
-    body: null,
-    link: { href: gradTalk.url, text: "Watch the talk" },
-  },
-  {
-    icon: Presentation,
-    kicker: `${workshop.format} · ${workshop.dates}`,
-    title: workshop.label,
-    body: `For ${workshop.host}, ${workshop.mode.toLowerCase()}.`,
-    link: null,
-  },
-]
 
 const focusAreas = [
   {
@@ -240,52 +218,6 @@ export default function ConsultingPage() {
           </div>
         </section>
 
-        {/* Teaching & Speaking */}
-        <section className="py-24 lg:py-32 bg-secondary/30">
-          <div className="container mx-auto px-6 lg:px-12">
-            <SectionWrapper>
-              <div className="max-w-3xl mb-16">
-                <span className="text-sm font-medium text-accent uppercase tracking-wider mb-4 block">
-                  Teaching & Speaking
-                </span>
-                <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-balance">
-                  Talks and <span className="gradient-text">workshops</span>
-                </h2>
-              </div>
-            </SectionWrapper>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {teaching.map((item, index) => (
-                <SectionWrapper key={item.kicker} delay={index * 100}>
-                  <div className={cn(
-                    "group bg-card border border-border rounded-2xl p-8 h-full flex flex-col",
-                    "transition-all duration-500 hover:border-accent/50 hover:shadow-xl hover:shadow-accent/5"
-                  )}>
-                    <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-accent/10">
-                      <item.icon className="w-7 h-7 text-accent" />
-                    </div>
-                    <span className="text-sm font-medium text-accent">{item.kicker}</span>
-                    <h3 className="font-serif text-xl font-medium text-foreground mt-2 mb-3 leading-snug">
-                      {item.title}
-                    </h3>
-                    {item.body && <p className="text-muted-foreground leading-relaxed">{item.body}</p>}
-                    {item.link && (
-                      <a
-                        href={item.link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent transition-colors"
-                      >
-                        {item.link.text}
-                        <ArrowUpRight className="w-4 h-4" />
-                      </a>
-                    )}
-                  </div>
-                </SectionWrapper>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Coaching vs Consulting */}
         <section className="py-24 lg:py-32">

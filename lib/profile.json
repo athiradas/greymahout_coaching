@@ -1,5 +1,5 @@
 {
-  "_about": "Generated from Athira's master profile (version 4, 2026-10-15) for greymahout.com. Don't edit by hand: change the master profile, then run the export.",
+  "_about": "Generated from Athira's master profile (version 5, 2026-10-15) for greymahout.com. Don't edit by hand: change the master profile, then run the export.",
   "basics": {
     "name": "Athira Das"
   },
@@ -86,7 +86,9 @@
       "format": "Lunch & Learn",
       "host": "Penn LPS Organizational Dynamics",
       "mode": "Online",
-      "date": "2026-10-14"
+      "date": "2026-10-14",
+      "url": "https://www.youtube.com/watch?v=Q9AaHE3yVq8",
+      "series": "Penn LPS Lunch & Learn"
     },
     "penn-grad-talk": {
       "label": "AI Integration in Organizations: The Question to Ask Before You Adopt AI",
